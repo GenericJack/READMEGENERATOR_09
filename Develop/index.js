@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatMarkdown = require('./generateMarkdown');
+const generatMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 
@@ -27,7 +28,8 @@ function init() {
           name: 'title',
           message: 'What is the title of your project?',
         },
-        // Add more questions here for README prompts
+       
+        
       ])
       .then((answers) => {
         const markdown = generateMarkdown(answers); // Call the generateMarkdown function
